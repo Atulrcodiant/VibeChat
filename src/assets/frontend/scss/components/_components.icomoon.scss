@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'lyria';
+  src:  url('#{$fonturl}/lyria.eot?4scufp');
+  src:  url('#{$fonturl}/lyria.eot?4scufp#iefix') format('embedded-opentype'),
+    url('#{$fonturl}/lyria.ttf?4scufp') format('truetype'),
+    url('#{$fonturl}/lyria.woff?4scufp') format('woff'),
+    url('#{$fonturl}/lyria.svg?4scufp#lyria') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="lyria-"], [class*=" lyria-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lyria' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lyria-body-type:before {
+  content: "\e90f";
+}
+.lyria-drinking:before {
+  content: "\e910";
+}
+.lyria-ethnicity:before {
+  content: "\e911";
+}
+.lyria-gender:before {
+  content: "\e912";
+}
+.lyria-height:before {
+  content: "\e913";
+}
+.lyria-location:before {
+  content: "\e914";
+}
+.lyria-piercing:before {
+  content: "\e915";
+}
+.lyria-sexuality:before {
+  content: "\e916";
+}
+.lyria-smoker:before {
+  content: "\e917";
+}
+.lyria-tattoos:before {
+  content: "\e918";
+}
+.lyria-arrow-left:before {
+  content: "\e90e";
+}
+.lyria-home:before {
+  content: "\e900";
+}
+.lyria-search:before {
+  content: "\e901";
+}
+.lyria-settings:before {
+  content: "\e902";
+}
+.lyria-customer:before {
+  content: "\e903";
+}
+.lyria-filter:before {
+  content: "\e904";
+}
+.lyria-play:before {
+  content: "\e905";
+}
+.lyria-loading:before {
+  content: "\e906";
+}
+.lyria-mic:before {
+  content: "\e907";
+}
+.lyria-send:before {
+  content: "\e908";
+}
+.lyria-more:before {
+  content: "\e909";
+}
+.lyria-list:before {
+  content: "\e90a";
+}
+.lyria-notification:before {
+  content: "\e90b";
+}
+.lyria-favorite:before {
+  content: "\e90c";
+}
+.lyria-chat:before {
+  content: "\e90d";
+}

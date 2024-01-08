@@ -1,0 +1,80 @@
+// variables
+$height:48px;
+$height-sm:38px;
+
+
+$btnColors: (
+  danger: (
+    clr: color(50),
+    bg: color(500), 
+  ),
+  secondary: (
+    clr: color(50),
+    bg: #6c757d, 
+  ),
+);
+.btn{
+    height: $height;@include flexcenter(both);display: inline-flex; text-transform: capitalize;
+    border-radius: 6px;padding:0 45px;font-family:font(md);
+    &.MuiButton-root{
+      height: $height;@include flexcenter(both);display: inline-flex; text-transform: capitalize;
+      border-radius: 6px;padding:0 45px;font-family:font(md);
+    }
+    &-sm{
+        height:$height-sm;padding:6px 15px;font-size: 14px;
+    }
+    @each $key, $clrValue in $btnColors {
+        // solid button
+        &-#{$key} {
+          @include button-variant(map-get($clrValue, clr), map-get($clrValue, bg), map-get($clrValue, bg));
+          &.MuiButton-root, &.MuiFab-root{
+            @include button-variant(map-get($clrValue, clr), map-get($clrValue, bg), map-get($clrValue, bg));
+          }
+        }
+        // outline button
+        &-outline-#{$key} {
+          @include button-outline-variant(map-get($clrValue, bg), map-get($clrValue, clr), map-get($clrValue, bg));
+          &.MuiButton-root{
+            @include button-outline-variant(map-get($clrValue, bg), map-get($clrValue, clr), map-get($clrValue, bg));
+          }
+        }   
+    }
+    @include media-breakpoint-down(xxl){
+      height: 40px;
+    }
+    @include media-breakpoint-down(xl){
+        height: $height-sm; padding: 0 25px; font-size: 14px;white-space: nowrap;
+    }
+}
+// Ripple Effect
+@keyframes ripple {
+    0% {
+        transform: scale(4);
+    }
+    100% {
+        opacity: 0; transform: scale(40);
+    }
+  }
+  .ripple-effect-dark,
+  .ripple-effect {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  .ripple-effect span.ripple-overlay,
+  .ripple-effect-dark span.ripple-overlay {
+    animation: ripple 0.9s;
+    border-radius: 100%;
+    background: color(50);
+    height: 12px;
+    position: absolute;
+    width: 12px;
+    line-height: 12px;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .ripple-effect-dark span.ripple-overlay {
+    background: color(900); opacity: 0.07;
+  }
+

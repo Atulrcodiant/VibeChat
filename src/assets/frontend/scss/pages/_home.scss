@@ -1,0 +1,455 @@
+.homePage{
+    .bannerSec{       
+        &_inner{
+            position: relative;
+            &_lft{
+                width: 100%;
+                max-width: 464px;
+            }
+            &_rht{
+                .MuiAvatar-root{
+                    height: auto;
+                    border-radius: 0;
+                }
+            }
+        }        
+        &_img{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &_box{
+                display: flex;
+                &_items{
+                    position: relative;
+                    margin-right: -20px;
+                    width: 54px;
+                    height: 54px;
+                    flex-shrink: 0;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 4px solid color(800);
+                    &_toggle{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        left: 0;
+                        cursor: pointer;
+                        transition: all 0.5s;
+                        background-color: rgba($color: color(800), $alpha: 0.70);
+                        span{
+                            color: color(50);
+                            font-size: 14px;
+                            font-family: font(md);
+                        }
+                        &:hover{
+                            background-color: rgba($color: color(500), $alpha: 0.70);
+                        }
+                    }
+                }
+                .css-1wlk0hk-MuiAvatar-root{width: 100%;height: 100%;}
+            }
+            &_txt{
+                color: color(500);
+                font-size: 115px;
+                font-family: font(as);
+            }
+        }
+        @media (min-width: 1700px) {
+            padding: 186px 0px;
+            &_inner{
+                &_rht{
+                    @include absolutecenter(y);
+                    right: -140px;
+                    .MuiAvatar-root{
+                        width: 876px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 1699px) {        
+            &_inner{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &_rht{
+                    .MuiAvatar-root{
+                        width: 100%;
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(xl){
+            &_img{
+                &_txt{
+                    font-size: 100px;
+                }
+            }
+            &_inner{
+                &_rht{                    
+                    .MuiAvatar-root{
+                        max-width: 420px;
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(lg){
+            &_img{
+                display: block;
+                &_txt{
+                    font-size: 80px;
+                }
+            }
+        }
+        @include media-breakpoint-down(md){
+            &_inner{
+                display: block;
+                &_lft{
+                    max-width: 100%;
+                }
+                &_rht{
+                    display: none;
+                }
+            }
+            &_img{
+                &_box{
+                    &_items{
+                        width: 46px;
+                        height: 46px;
+                    }
+                }
+            }
+        }
+    }
+    .howSec{
+        &_inner{
+            .MuiGrid-root{
+                .MuiGrid-item{
+                    position: relative;
+                    padding-left: 20px;
+                    &:first-child{
+                        padding-left: 0px;
+                    }
+                    &:not(:last-child){
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 77px;
+                            height: 104px;
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            right: -15px;
+                        }
+                    }
+                    &:nth-child(1), &:nth-child(3){
+                        &::before{
+                            background-image: url("#{$imageurl}/count-img-1.svg");
+                            top: 100px;
+                        }
+                    }
+                    &:nth-child(2), &:nth-child(4){
+                        &::before{
+                            background-image: url("#{$imageurl}/count-img-2.svg");
+                        }
+                    }
+                    &:nth-child(even) {
+                        margin-top: 100px;
+                    }
+                }
+            }
+        }
+        &_box{
+            &:hover{
+                .MuiAvatar-root{
+                    filter:inherit; 
+                }
+            }
+            &_img{
+                width: 280px;
+                height: 200px;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 50px;                
+                .MuiAvatar-root{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px;
+                    filter: grayscale(1);
+                    transition: all 0.5s;
+                }
+            }
+            &_num{
+                font-size: 20px;
+                color: color(50);
+                font-family: font(bd);
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background-color: color(500);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+            &_title{
+                &.MuiTypography-root{
+                    color: color(50);
+                    font-size: 24px;
+                    line-height: 38px;
+                }
+            }           
+        }
+        @include media-breakpoint-down(xxl){
+            &_inner{
+                .MuiGrid-root{
+                    .MuiGrid-item{
+                        &:not(:last-child){
+                            &::before{display: none;}
+                        }
+                    }
+                }
+            }
+            &_box{
+                &_img{
+                    width: 260px;
+                    height: 190px;
+                    margin-bottom: 20px;
+                }
+                &_num{
+                    font-size: 18px;
+                    width: 48px;
+                    height: 48px;
+                    margin-bottom: 20px;
+                }
+                &_title{
+                    &.MuiTypography-root{
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+                }           
+            }
+        }
+        @include media-breakpoint-down(xxl){
+            &_inner{
+                .MuiGrid-root{
+                    .MuiGrid-item{
+                        padding-left: 0px;
+                        &:nth-child(even) {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+            }
+            &_box{
+                margin-bottom: 25px;
+                text-align: center;
+                &_img{
+                    margin: 0 auto 15px;
+                }
+                &_num{
+                    margin: 0 auto 15px;
+                }
+            }
+        }
+        @include media-breakpoint-down(lg){
+            &_box{
+                &_num{
+                    font-size: 15px;
+                    width: 40px;
+                    height: 40px;
+                }
+                &_title{
+                    &.MuiTypography-root{
+                        font-size: 16px;
+                        line-height: 24px;
+                        padding: 0px 8px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 899px) {
+            &_inner{
+                .MuiGrid-container{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .aboutUs{
+        background-color: color(700);
+        p{color:color(200);margin-bottom: 20px;}
+        .btn{margin-top: 30px;}
+        &_caption{padding-left: 150px;}
+        img{max-width: 100%; height: auto;}
+        .commonHead{margin-bottom: 0;}
+        @include media-breakpoint-down(xxl){
+            &_caption{padding-left: 100px;}
+        }
+        @include media-breakpoint-down(xl){
+            &_caption{padding-left: 50px;}
+            p{font-size: 16px;margin-bottom: 15px;}
+            .btn{margin-top: 20px;}
+        }
+        @include media-breakpoint-down(lg){
+            &_caption{padding-left: 0; }
+        }
+        @include media-breakpoint-down(sm){
+            &_caption{text-align: center;}
+            .btn{margin-top: 10px;}
+        }
+    }
+    .vibeChat{
+        p{max-width: 690px;margin:0 auto;}
+        img{max-width: 100%; height: auto;}
+        @include media-breakpoint-down(xl){
+            p{max-width: 100%;font-size: 16px;}
+        }
+    }
+    .whyChooseSec {
+        background-color: color(700);
+        &_video {
+          position: relative;
+          border-radius: 10px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          .icon {
+            color: color(50);
+            @include absolutecenter(both);
+            background-color: rgba($color: color(800), $alpha: 0.6);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            @include flexcenter(both);
+            animation: animate-pulse 2s linear infinite;
+            svg{
+              font-size: 36px;
+            }
+          }
+          @keyframes animate-pulse {
+            0% {
+              box-shadow: 0 0 0 0 rgba($color: color(800), $alpha: 0.9),
+                0 0 0 0 rgba($color: color(800), $alpha: 0.8);
+            }
+            50% {
+              box-shadow: 0 0 0 20px rgba($color: color(50), $alpha: 0),
+                0 0 0 0 rgba($color: color(50), $alpha: 0.8);
+            }
+            100% {
+              box-shadow: 0 0 0 0 rgba($color: color(50), $alpha: 0),
+                rgba($color: color(50), $alpha: 0);
+            }
+          }
+        }
+        .MuiGrid-root {
+          align-items: center;
+        }
+        &_list {
+          padding-left: 260px;
+          padding-top: 110px;
+          ul{
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+          li {
+            color: color(50);
+            font-family: font(md);
+            font-size: 20px;
+            line-height: 1.4;
+            padding-left: 0;
+            padding-right: 0;
+            &:not(:last-child) {
+              border-bottom: 1px solid rgba($color: color(200), $alpha: 0.5);
+              padding-bottom: 20px;
+              margin-bottom: 20px;
+            }
+          }
+          .btn {
+            margin-top: 50px;
+          }
+        }
+        @media (min-width: 1499px) {
+          .commonHead {
+            margin-bottom: 50px;
+            &_title {
+              &.MuiTypography-root {
+                margin-bottom: 25px;
+              }
+            }
+          }
+        }
+        @include media-breakpoint-down(xxl) {
+          &_list {
+              padding-left: 190px;
+              padding-top: 50px;
+          }
+        }
+        @media (max-width: 1399px) {
+          &_list{
+              padding-left: 80px;
+              li{
+                  font-size: 18px;
+              }
+              .btn{
+                  margin-top: 30px;
+              }
+          }
+        }
+        @include media-breakpoint-down(xl) {
+          &_list {
+              padding-left: 30px;
+              padding-top: 0px;
+          }
+          &_video{
+              .icon{
+                  width: 60px;
+                  height: 60px;
+                  svg{
+                      font-size: 30px;
+                  }
+              }
+          }
+        }
+        @include media-breakpoint-down(lg) {
+          .commonHead{
+              text-align: center;
+          }
+          &_list{
+              padding-left: 10px;
+              margin-top: 10px;
+              li{
+                  &:not(:last-child){
+                      margin-bottom: 15px;
+                      padding-bottom: 15px;
+                  }
+              }
+          }
+          &_video{
+              max-width: 500px;
+              width: 100%;
+              margin: auto;
+          }
+        }
+        @include media-breakpoint-down(sm) {
+          &_list{
+              padding-left: 0px;
+              li{font-size: 15px;}
+          }
+          &_video{
+              max-width: 100%;
+          }
+          .btn{
+              margin-top: 20px;
+          }
+        }
+      }
+
+}

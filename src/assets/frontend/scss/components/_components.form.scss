@@ -1,0 +1,34 @@
+
+.MuiFormControl-root{
+  .MuiFormLabel-root{
+    font-family: font(rg);
+    &.Mui-focused{
+      color: color(500);
+    }
+  }
+  .MuiOutlinedInput-root{
+    font-family: font(rg);
+    &.Mui-focused{
+      .MuiOutlinedInput-notchedOutline{
+        border-color: color(500);
+      }
+    }
+  }
+}
+textarea.bioField {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: font(rg);
+  resize: none;
+  &:hover{
+      border-color: color(900);
+  }
+  &:focus{
+      outline-color: color(500);
+  }
+}

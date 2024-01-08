@@ -1,0 +1,50 @@
+// color variables
+$colors: (
+  50:  #ffffff,
+  80:  #F2F2F2,
+  200: #9D9D9D,
+  500: #FF366C,
+  600: #A388FF,
+  700: #232323,
+  800: #0A0A0A,
+  900: #000000,
+);
+
+
+@function color($color) {
+  // checking to see if our $theme-colors map has that $color key
+  @if map-has-key($colors, $color) {
+    // and if so, it will get that color for us in the map-get syntax
+    @return map-get($colors, $color);
+  }
+  // if not, it will give us a helpful error when we compile
+  @error "Unknown `#{$color}` in $colors.";
+  @return null;
+}
+
+
+$imageurl: "../../images";
+$fonturl: "../../fonts";
+
+
+// Fonts Variables
+$font: (  
+  rg: ("SFProDisplay-Regular", Arial,sans-serif),
+  md: ("SFProDisplay-Medium", Arial,sans-serif),
+  bd: ("SFProDisplay-Bold", Arial,sans-serif),
+  as: ("Astronout", Arial,sans-serif),
+);
+@function font($font-name) {
+  @return map-get($font, $font-name);
+}
+
+// fields height variable
+$field-height:45px; // field height
+$field-height-xl:40px;  // field height responsive xl
+$field-height-lg:38px;  // field height responsive lg
+$field-height-md:30px; // field height responsive md
+
+// fields padding variable
+$field-padding:10px 20px; //field padding
+$field-padding-xl:10px;  //field height responsive xl
+$field-padding-lg:6px 10px;  //field height responsive lg
